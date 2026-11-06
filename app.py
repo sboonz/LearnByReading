@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='template')
 # specify where the database is located
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # /// is relative path, //// is absolute path
 db = SQLAlchemy(app)    # database initialized from the settings in our app
